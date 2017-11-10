@@ -1,0 +1,9 @@
+
+
+<div [hidden]="IsAddNew">
+    <employee-list (addClick)="ShowAddNew()" TitleText="Employeeeeee List">List is coming</employee-list>
+</div>
+<div [hidden]="!IsAddNew">
+
+    <employee-add (cancelClick)="HideAddNew()">Add is coming</employee-add>
+</div>

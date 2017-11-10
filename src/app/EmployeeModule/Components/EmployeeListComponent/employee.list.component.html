@@ -1,0 +1,13 @@
+<h1>{{TitleText}}</h1>
+
+<input type="button" value="Add New" (click)="ShowAddNew()">
+<table border="1">
+    <tr  mouseovercolor='blue'>
+        <th>EmpName</th>
+        <th>Salary</th>
+    </tr>
+    <tr *ngFor="let x of Employees" mouseovercolor='green'>
+        <td>{{x.EmpName | mypipe:'(':x.Salary:')'}}</td>
+        <td>{{x.Salary}}</td>
+    </tr>
+</table>

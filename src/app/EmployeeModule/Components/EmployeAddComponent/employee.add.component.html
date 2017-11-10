@@ -1,0 +1,16 @@
+<h1>Employee Add</h1>
+
+<form (ngSubmit)="SaveEmp()" [formGroup]="myForm">
+        EmpName:
+        <input type="text"  formControlName="EmpName"  >
+       <span *ngIf="myForm.controls['EmpName'].invalid 
+        && myForm.controls['EmpName'].touched">
+            Please enter EmpName
+        </span> 
+        <br> Salary:
+        <input type="text" formControlName="Salary" > 
+        <br>
+     
+        <input type="submit" value="Save" [disabled]='myForm.invalid'>
+        <input type="button" value="Cancel" (click)="Cancel()">
+    </form>
